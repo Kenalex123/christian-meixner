@@ -1,0 +1,71 @@
+
+.link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  padding-top: 30px;
+}
+
+.cursor .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* background: rgba(0,0,0,1); */
+    /* background: rgba(255,255,255,1); */
+  /* background-image: url('../images/cursor.svg'); */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+    font-size: 1px;
+
+}
+
+.page-template-page-about .cursor .circle {
+  background: rgba(255,255,255, 0);
+}
+
+.cursor .circle.active {
+  width: 60px;
+  height: 60px;
+
+}
+.cursor .circle p {
+    font-size: .3rem;
+    opacity: 0;
+    margin-top: 40px;
+    margin-right: -40px;
+}
+
+.cursor .circle.active p {
+    color: black;
+    font-size: 1.3rem;
+    opacity: 1;
+    /* display: inline-block; */
+    transform: rotate(45deg);
+}
+.cursor .circle img {
+    width: 20px;
+    height: 20px;
+    transition: ease .3s;
+    margin-bottom: -60px;
+    margin-right: -100px;
+}
+.cursor .circle.active img {
+    width: 60px;
+    height: 60px;
+    transform: rotate(-270deg);
+    margin-bottom: -120px;
+    margin-right: -120px;
+}
